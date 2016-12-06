@@ -24,6 +24,10 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Pets", "Index", "Pet")</li>
+                    <li>@Html.ActionLink("Foods", "Index", "Food")</li>
+                    <li>@Html.ActionLink("Vets", "Index", "Vet")</li>
+                    <li>@Html.ActionLink("Walks", "Index", "Walk")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -32,10 +36,21 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        <div class="footer">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h4><strong>x14532757</strong></h4>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h4><strong>Copyright 2016 &#169; Created by Aaron Healy</strong></h4>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a href="#Home"> <h4> Back to top </h4></a>
+                </div>
+            <br />
+        </div>
     </div>
+    
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

@@ -1,0 +1,66 @@
+﻿@model PetHealthAssistantProject.Models.Pet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Breed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shedding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shedding)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drooling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drooling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExerciseNeeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExerciseNeeds)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

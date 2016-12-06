@@ -1,0 +1,73 @@
+﻿@model IEnumerable<PetHealthAssistantProject.Models.Pet>
+
+<div class="jumbotron jumbotronHome">
+    <h1>Dog Breeds</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+    
+</div>
+
+<div class="container">
+    <div class="col-md-3"></div>
+    <form action="action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" name="search" placeholder="Search..">
+
+        <input class="btn btn-primary btn-lg" type="submit" value="Submit">
+    </form>
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Breed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shedding)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Drooling)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weather)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciseNeeds)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Breed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shedding)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Drooling)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weather)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseNeeds)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

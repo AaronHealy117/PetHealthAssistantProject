@@ -1,0 +1,50 @@
+﻿@model PetHealthAssistantProject.Models.Vet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VetHospitalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VetHospitalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VetSpeciality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VetSpeciality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VetAppointment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VetAppointment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
